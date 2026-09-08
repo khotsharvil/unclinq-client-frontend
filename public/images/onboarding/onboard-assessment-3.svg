@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FDF9F4"/>
+
+  <!-- ===== LEFT PLANT — one leaf extending toward right, plant upright ===== -->
+  <g transform="translate(150, 370)">
+    <!-- Pot -->
+    <path d="M-52 0 Q-56 42 -64 62 L64 62 Q56 42 52 0 Z" fill="#C06C54" stroke="#A85840" stroke-width="1.5" stroke-linejoin="round"/>
+    <rect x="-58" y="-8" width="116" height="13" rx="4" fill="#D07A62" stroke="#A85840" stroke-width="1.5"/>
+    <ellipse cx="0" cy="-4" rx="52" ry="7" fill="#3D4535"/>
+    <ellipse cx="0" cy="-2" rx="46" ry="5" fill="#2C332B"/>
+    <!-- Stem - upright -->
+    <path d="M0 -5 Q-2 -50 0 -90 Q2 -130 0 -165" fill="none" stroke="#8F9779" stroke-width="2" stroke-linecap="round"/>
+    <!-- Leaf lower left -->
+    <path d="M-1 -50 Q-28 -65 -46 -90 Q-34 -98 -12 -78 Q-5 -64 -1 -50 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M-1 -50 Q-26 -74 -46 -90" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+    <!-- KEY LEAF: extending far right toward right plant -->
+    <path d="M1 -95 Q40 -105 88 -98 Q82 -82 48 -86 Q24 -89 1 -95 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M1 -95 Q44 -96 88 -98" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+    <!-- Leaf upper left -->
+    <path d="M-1 -130 Q-26 -148 -44 -170 Q-32 -178 -10 -158 Q-4 -144 -1 -130 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M-1 -130 Q-24 -152 -44 -170" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+    <!-- Top leaf -->
+    <path d="M0 -158 Q-8 -185 -4 -208 Q6 -204 10 -178 Q6 -167 0 -158 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M0 -158 Q2 -182 2 -208" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===== RIGHT PLANT — turned away, all leaves angled left/away ===== -->
+  <g transform="translate(362, 370) rotate(8, 0, 0)">
+    <!-- Pot -->
+    <path d="M-52 0 Q-56 42 -64 62 L64 62 Q56 42 52 0 Z" fill="#C06C54" stroke="#A85840" stroke-width="1.5" stroke-linejoin="round"/>
+    <rect x="-58" y="-8" width="116" height="13" rx="4" fill="#D07A62" stroke="#A85840" stroke-width="1.5"/>
+    <ellipse cx="0" cy="-4" rx="52" ry="7" fill="#3D4535"/>
+    <ellipse cx="0" cy="-2" rx="46" ry="5" fill="#2C332B"/>
+    <!-- Stem leans slightly right (away) -->
+    <path d="M0 -5 Q6 -50 10 -95 Q12 -132 8 -165" fill="none" stroke="#8F9779" stroke-width="2" stroke-linecap="round"/>
+    <!-- Leaf 1 — angled away to the right -->
+    <path d="M8 -55 Q38 -65 62 -88 Q50 -98 28 -80 Q16 -68 8 -55 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M8 -55 Q36 -74 62 -88" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+    <!-- Leaf 2 — angled away right -->
+    <path d="M9 -98 Q38 -108 66 -102 Q60 -88 36 -92 Q22 -94 9 -98 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M9 -98 Q40 -100 66 -102" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+    <!-- Leaf 3 — upper, angled far right -->
+    <path d="M9 -130 Q36 -148 60 -168 Q48 -178 26 -160 Q15 -146 9 -130 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M9 -130 Q36 -152 60 -168" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+    <!-- Top leaf — leaning right -->
+    <path d="M8 -158 Q18 -184 14 -208 Q4 -204 -2 -180 Q2 -168 8 -158 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M8 -158 Q10 -182 8 -208" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FDF9F4"/>
+
+  <!-- Soil bar at bottom -->
+  <path d="M120 430 Q120 460 120 470 L392 470 Q392 460 392 430 Q380 418 256 418 Q132 418 120 430 Z" fill="#2C332B"/>
+  <!-- Soil surface texture line -->
+  <path d="M128 430 Q200 424 256 425 Q312 426 384 430" fill="none" stroke="#3D4535" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Open hand, palm up — ivory/warm skin tone, flat minimalist -->
+  <!-- Palm base -->
+  <path d="M186 420 Q178 406 180 388 Q182 372 196 368 Q208 365 214 378 Q216 368 226 362 Q238 358 244 370 Q246 360 258 356 Q270 354 274 366 Q278 356 290 354 Q304 354 306 368 Q316 358 328 364 Q338 372 334 390 Q330 408 322 420 Z" fill="#E8D5B8" stroke="#C4A882" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- Finger definitions — subtle creases -->
+  <!-- Pinky outline -->
+  <path d="M186 420 Q182 406 184 392 Q186 378 196 374" fill="none" stroke="#C4A882" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <!-- Ring finger crease -->
+  <path d="M208 420 Q206 402 208 386 Q210 372 216 368" fill="none" stroke="#C4A882" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <!-- Middle finger crease -->
+  <path d="M236 420 Q234 398 236 380 Q238 364 244 360" fill="none" stroke="#C4A882" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <!-- Index finger crease -->
+  <path d="M264 420 Q264 402 264 384 Q264 368 270 362" fill="none" stroke="#C4A882" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <!-- Thumb suggested on right -->
+  <path d="M322 418 Q334 408 338 394 Q340 378 330 370 Q320 362 310 370" fill="none" stroke="#C4A882" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+  <!-- Palm crease line -->
+  <path d="M196 412 Q240 406 290 410" fill="none" stroke="#C4A882" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+
+  <!-- Seed resting in center of palm -->
+  <ellipse cx="256" cy="385" rx="18" ry="11" fill="#C4AA88" stroke="#A88E6A" stroke-width="1.5"/>
+  <!-- Seed center crease -->
+  <path d="M242 385 Q256 382 270 385" fill="none" stroke="#A88E6A" stroke-width="1" stroke-linecap="round" opacity="0.7"/>
+  <!-- Tiny root suggestion from seed tip -->
+  <path d="M256 396 Q258 404 256 412" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Subtle glow around seed -->
+  <defs>
+    <radialGradient id="seedGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#C4AA88" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#C4AA88" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="256" cy="385" rx="40" ry="28" fill="url(#seedGlow)"/>
+
+  <!-- Small sprout beginning to emerge above seed -->
+  <path d="M256 375 Q254 358 252 340" fill="none" stroke="#8F9779" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Tiny first leaf -->
+  <path d="M252 348 Q238 336 228 318 Q238 314 250 330 Q252 340 252 348 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.2" stroke-linejoin="round"/>
+  <!-- Tiny second leaf -->
+  <path d="M253 344 Q268 332 278 314 Q268 310 256 326 Q253 336 253 344 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.2" stroke-linejoin="round"/>
+</svg>

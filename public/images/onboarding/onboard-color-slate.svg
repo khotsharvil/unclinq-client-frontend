@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FDF9F4"/>
+
+  <defs>
+    <radialGradient id="glowSlate" cx="50%" cy="45%" r="38%">
+      <stop offset="0%" stop-color="#4A7A8C" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#4A7A8C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Cool teal glow behind plant -->
+  <ellipse cx="256" cy="260" rx="160" ry="160" fill="url(#glowSlate)"/>
+
+  <!-- Slate teal pot -->
+  <path d="M204 375 Q200 425 192 450 L320 450 Q312 425 308 375 Z" fill="#4A7A8C" stroke="#3A6070" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Pot rim -->
+  <rect x="198" y="368" width="116" height="13" rx="4" fill="#5A8A9C" stroke="#3A6070" stroke-width="1.5"/>
+  <!-- Soil -->
+  <ellipse cx="256" cy="372" rx="52" ry="7" fill="#3D4535"/>
+  <ellipse cx="256" cy="374" rx="46" ry="5" fill="#2C332B"/>
+
+  <!-- Main stem — very upright, measured -->
+  <path d="M256 372 Q255 340 255 305 Q255 270 256 230 Q256 195 256 160" fill="none" stroke="#8F9779" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Leaf 1 — lower left, symmetrical -->
+  <path d="M255 330 Q226 312 212 282 Q224 274 248 295 Q254 312 255 330 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M255 330 Q230 306 212 282" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 2 — lower right, symmetrical -->
+  <path d="M257 325 Q286 308 300 278 Q288 270 264 292 Q259 308 257 325 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M257 325 Q282 302 300 278" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 3 — mid left, slightly higher -->
+  <path d="M255 285 Q225 265 212 234 Q225 226 248 250 Q254 268 255 285 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M255 285 Q228 258 212 234" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 4 — mid right -->
+  <path d="M257 280 Q288 258 302 226 Q290 220 266 246 Q260 263 257 280 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M257 280 Q284 252 302 226" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 5 — upper left -->
+  <path d="M255 240 Q228 218 218 186 Q232 180 252 208 Q255 224 255 240 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M255 240 Q234 212 218 186" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 6 — upper right -->
+  <path d="M257 235 Q286 212 296 180 Q282 176 262 204 Q258 220 257 235 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M257 235 Q282 208 296 180" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Top leaf — centered, upright -->
+  <path d="M256 168 Q246 140 248 112 Q256 106 264 130 Q262 149 256 168 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M256 168 Q256 138 256 112" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+</svg>

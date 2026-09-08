@@ -1,0 +1,511 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────────────────────────────────────────────────────────────────
+   Unclinq B2B2C theme tokens.
+   Two experiences share one kit, differentiated by data-theme on a wrapper.
+   Client   = warm paper, clay accent.
+   Therapist = cool neutral, slate-teal accent.
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* client (default) */
+  --bg: #FBF6F1;
+  --surface: #FFFDFB;
+  --surface-alt: #F6EFE8;
+  --border: #E9DED4;
+  --border-strong: #D8C8BA;
+  --text: #2C1D15;
+  --text-secondary: #6F5D51;
+  --text-muted: #A08b7d;
+  --accent: #C4623F;
+  --accent-hover: #A94F30;
+  --accent-soft: #F4E5DD;
+  --accent-border: rgba(196, 98, 63, 0.28);
+  --radius: 16px;
+  --radius-lg: 22px;
+}
+
+[data-theme='client'] {
+  --bg: #FBF6F1;
+  --surface: #FFFDFB;
+  --surface-alt: #F6EFE8;
+  --border: #E9DED4;
+  --border-strong: #D8C8BA;
+  --text: #2C1D15;
+  --text-secondary: #6F5D51;
+  --text-muted: #A08b7d;
+  --accent: #C4623F;
+  --accent-hover: #A94F30;
+  --accent-soft: #F4E5DD;
+  --accent-border: rgba(196, 98, 63, 0.28);
+}
+
+[data-theme='therapist'] {
+  --bg: #F4F6F7;
+  --surface: #FFFFFF;
+  --surface-alt: #EDF1F2;
+  --border: #DDE4E6;
+  --border-strong: #C6D1D4;
+  --text: #1E2A2D;
+  --text-secondary: #566469;
+  --text-muted: #8A989C;
+  --accent: #3E6B72;
+  --accent-hover: #2F5359;
+  --accent-soft: #E2EBEC;
+  --accent-border: rgba(62, 107, 114, 0.30);
+}
+
+/* ── Dark appearance (data-mode='dark') — orthogonal to the role theme.
+   Keeps each theme's accent hue but on a dark, low-glare surface. ── */
+[data-theme='client'][data-mode='dark'] {
+  --bg: #1A1512;
+  --surface: #241C18;
+  --surface-alt: #2C2320;
+  --border: #382D27;
+  --border-strong: #4A3A31;
+  --text: #F3E9E1;
+  --text-secondary: #C3B2A6;
+  --text-muted: #8A776B;
+  --accent: #E07A54;
+  --accent-hover: #EC8C68;
+  --accent-soft: #34241D;
+  --accent-border: rgba(224, 122, 84, 0.35);
+}
+
+[data-theme='therapist'][data-mode='dark'] {
+  --bg: #121A1B;
+  --surface: #182324;
+  --surface-alt: #1F2C2E;
+  --border: #2A393B;
+  --border-strong: #3B4E51;
+  --text: #E6EEEF;
+  --text-secondary: #A9BABD;
+  --text-muted: #7A8B8E;
+  --accent: #5FA0A8;
+  --accent-hover: #71B2BA;
+  --accent-soft: #1D2C2E;
+  --accent-border: rgba(95, 160, 168, 0.35);
+}
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  html, body, #root { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Nunito', 'Satoshi', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  #root { overflow-y: auto; overflow-x: hidden; }
+
+  input, textarea, select { font-size: 16px; }
+
+  button, a, [role='button'], input, textarea, select, label {
+    touch-action: manipulation;
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--accent-border);
+    border-radius: 10px;
+  }
+}
+
+@layer components {
+  .uc-bg { background: var(--bg); }
+  .uc-muted { color: var(--text-muted); }
+  .uc-secondary { color: var(--text-secondary); }
+
+  /* ── Card ─────────────────────────────────────────────────────────── */
+  .uc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    box-shadow: 0 1px 2px rgba(30, 24, 20, 0.04), 0 4px 14px rgba(30, 24, 20, 0.04);
+  }
+  .uc-card--accent {
+    border-color: var(--accent-border);
+    background: var(--accent-soft);
+  }
+
+  /* ── Buttons ──────────────────────────────────────────────────────── */
+  .uc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 46px;
+    padding: 0.7rem 1.25rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    line-height: 1;
+    text-decoration: none;
+    transition: all 0.18s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .uc-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+  .uc-btn:active:not(:disabled) { transform: scale(0.98); }
+
+  .uc-btn--primary {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  }
+  .uc-btn--primary:hover:not(:disabled) { background: var(--accent-hover); }
+
+  .uc-btn--secondary {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border-strong);
+  }
+  .uc-btn--secondary:hover:not(:disabled) { background: var(--surface-alt); }
+
+  .uc-btn--ghost {
+    background: transparent;
+    color: var(--text-secondary);
+  }
+  .uc-btn--ghost:hover:not(:disabled) { background: var(--surface-alt); color: var(--text); }
+
+  .uc-btn--danger {
+    background: transparent;
+    color: #B0332F;
+    border-color: rgba(176, 51, 47, 0.4);
+  }
+  .uc-btn--danger:hover:not(:disabled) { background: rgba(176, 51, 47, 0.08); }
+
+  .uc-btn--sm { min-height: 36px; padding: 0.4rem 0.85rem; font-size: 0.8125rem; }
+  .uc-btn--block { width: 100%; }
+
+  /* ── Inputs ───────────────────────────────────────────────────────── */
+  .uc-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+  }
+  .uc-input {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 12px;
+    padding: 0.75rem 0.9rem;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .uc-input::placeholder { color: var(--text-muted); }
+  .uc-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-border);
+  }
+  .uc-textarea { min-height: 96px; resize: vertical; line-height: 1.5; }
+
+  /* ── Badges ───────────────────────────────────────────────────────── */
+  .uc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+  }
+  .uc-badge--neutral { background: var(--surface-alt); color: var(--text-secondary); border-color: var(--border); }
+  .uc-badge--info    { background: #E4EDF2; color: #2C5A6B; border-color: #CBDEE6; }
+  .uc-badge--good    { background: #E3F0E4; color: #2F6D3A; border-color: #CBE4CE; }
+  .uc-badge--warn    { background: #FBF0DD; color: #93641B; border-color: #F0DEBE; }
+  .uc-badge--bad     { background: #F7E1DF; color: #9E2C29; border-color: #EFCAC7; }
+
+  /* ── Provenance badges (core product requirement) ─────────────────── */
+  .uc-prov {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+  /* Therapist-authored: solid, prominent accent. */
+  .uc-prov--therapist {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid var(--accent);
+  }
+  /* AI-generated: muted, dashed. */
+  .uc-prov--ai {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px dashed var(--border-strong);
+  }
+  /* Client-generated: neutral. */
+  .uc-prov--client {
+    background: var(--surface-alt);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+
+  /* ── Empty state ──────────────────────────────────────────────────── */
+  .uc-empty {
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius-lg);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    background: var(--surface);
+  }
+  .uc-empty__title { font-weight: 700; color: var(--text); }
+  .uc-empty__body { margin-top: 0.35rem; color: var(--text-secondary); font-size: 0.9rem; }
+
+  /* ── Spinner ──────────────────────────────────────────────────────── */
+  .uc-spinner {
+    display: inline-block;
+    border: 2px solid var(--border-strong);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: uc-spin 0.7s linear infinite;
+  }
+  @keyframes uc-spin { to { transform: rotate(360deg); } }
+
+  /* ── Chat bubbles ─────────────────────────────────────────────────── */
+  .uc-bubble {
+    max-width: 84%;
+    padding: 0.7rem 0.95rem;
+    border-radius: 16px;
+    line-height: 1.5;
+    font-size: 0.9375rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+  .uc-bubble--emora {
+    align-self: flex-start;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-bottom-left-radius: 5px;
+    color: var(--text);
+  }
+  .uc-bubble--user {
+    align-self: flex-end;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-border);
+    border-bottom-right-radius: 5px;
+    color: var(--text);
+  }
+  .uc-bubble--crisis {
+    align-self: flex-start;
+    background: #F7E9E4;
+    border: 1px solid #E4B7A6;
+    border-radius: 16px;
+    color: #7A2E1C;
+  }
+
+  /* ── Nav ──────────────────────────────────────────────────────────── */
+  .uc-navlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .uc-navlink:hover { background: var(--surface-alt); color: var(--text); }
+  .uc-navlink--active { background: var(--accent-soft); color: var(--accent); }
+
+  .uc-tab {
+    padding: 0.55rem 0.9rem;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border: 1px solid transparent;
+    background: transparent;
+  }
+  .uc-tab--active { background: var(--surface); color: var(--accent); border-color: var(--border); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   B2C DESIGN SYSTEM — ported into the CLIENT surface only.
+   Scoped under [data-theme='client'] so the therapist theme (uc-* classes on
+   --bg/--accent/--text) is completely untouched. This defines the B2C CSS vars
+   that the (already-present) tailwind mappings + the card, button and type
+   classes below rely on. Design/UX only — no B2C product features or philosophy.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+[data-theme='client'] {
+  /* style-palette (terracotta) */
+  --sp:          #C05B3A;
+  --sp-text:     #9E4A2C;
+  --sp-rgb:      192,91,58;
+  --sp-hover:    #A84E30;
+  --sp-light:    #F5EDE6;
+  --sp-border:   rgba(192,91,58,0.18);
+  /* warm sand surfaces (B2C) — override the B2B2C client defaults */
+  --app-bg:      #FDF9F5;
+  --bg:          #FDF9F5;
+  --surface:     #FFFAF7;
+  --surface-alt: #FCFAF4;
+  --input-bg:    #FFFAF7;
+  --hairline:    #E8DDD7;
+  --hairline-rgb: 213,198,191;
+  --surface-rgb:  255,249,240;
+  --fill-soft-rgb: 143,151,121;
+  --overlay:     rgba(242,235,224,0.96);
+  --nav-bg:      #F5EDE4;
+  --skeleton-base:  #EAE4DA;
+  --skeleton-shine: #FAF6F0;
+  --surface-subtle:        #EBE0D5;
+  --surface-subtle-border: #D4C5B5;
+  --text-primary:   #2C1A12;
+  --text-secondary: #8C7B72;
+  --text-muted:     #B8988C;
+  /* keep B2B2C's --accent aligned to the palette so uc-* still reads warm */
+  --accent:        #C05B3A;
+  --accent-hover:  #A84E30;
+  --accent-soft:   #F5EDE6;
+  --accent-border: rgba(192,91,58,0.18);
+  --border:        #E8DDD7;
+  --border-strong: #D4C5B5;
+  --text:          #2C1A12;
+}
+
+[data-theme='client'] .font-serif {
+  font-optical-sizing: auto;
+  font-variation-settings: 'opsz' 18;
+}
+
+@layer components {
+  /* ── Buttons ─────────────────────────────────────────────────────────── */
+  [data-theme='client'] .btn-primary {
+    @apply relative text-white font-semibold px-6 py-3.5 transition-all duration-200;
+    border-radius: 14px; background-color: var(--sp);
+    box-shadow: 0 1px 2px rgba(60,42,33,0.12), 0 2px 8px var(--sp-border);
+    letter-spacing: 0.01em; font-size: 0.9375rem; min-height: 48px;
+  }
+  [data-theme='client'] .btn-primary:not(:disabled):hover { background-color: var(--sp-hover); }
+  [data-theme='client'] .btn-primary:active { transform: scale(0.97); }
+  [data-theme='client'] .btn-primary:disabled { opacity: 0.35; cursor: not-allowed; }
+
+  [data-theme='client'] .btn-secondary {
+    @apply border text-text-primary font-medium px-6 py-3.5 transition-all duration-200;
+    border-radius: 14px; background-color: var(--surface); border-color: var(--hairline);
+    font-size: 0.9375rem; box-shadow: 0 1px 3px rgba(28,23,19,0.05); min-height: 48px;
+  }
+  [data-theme='client'] .btn-secondary:not(:disabled):hover { border-color: var(--sp-border); background-color: var(--surface-alt); }
+  [data-theme='client'] .btn-secondary:active { transform: scale(0.97); }
+  [data-theme='client'] .btn-ghost {
+    @apply text-text-secondary font-medium px-4 py-3 transition-all duration-200;
+    border-radius: 14px; font-size: 0.9375rem; min-height: 44px;
+  }
+  [data-theme='client'] .btn-ghost:hover { color: #2C1A12; background-color: rgba(28,23,19,0.05); }
+  [data-theme='client'] .btn-ghost:active { transform: scale(0.97); }
+
+  /* ── Cards ───────────────────────────────────────────────────────────── */
+  [data-theme='client'] .card {
+    @apply p-5; border-radius: 20px; background: #FFFDFB;
+    border: 1px solid rgba(107,74,50,0.06);
+    box-shadow: 0 1px 2px rgba(58,42,32,0.04), 0 10px 28px rgba(58,42,32,0.07);
+  }
+  [data-theme='client'] .card-interactive {
+    @apply p-5 transition-all duration-200 cursor-pointer; border-radius: 20px;
+    background: #FFFDFB; border: 1px solid rgba(107,74,50,0.06);
+    box-shadow: 0 1px 2px rgba(58,42,32,0.04), 0 10px 28px rgba(58,42,32,0.07);
+  }
+  [data-theme='client'] .card-interactive:hover { transform: translateY(-2px); box-shadow: 0 2px 4px rgba(58,42,32,0.05), 0 16px 36px rgba(58,42,32,0.11); }
+  [data-theme='client'] .card-interactive:active { transform: scale(0.99); }
+
+  /* ── Inputs ──────────────────────────────────────────────────────────── */
+  [data-theme='client'] .input-field {
+    @apply w-full border px-4 py-3.5 text-text-primary outline-none transition-all duration-200;
+    border-radius: 16px; background-color: var(--input-bg); border-color: var(--hairline);
+    box-shadow: 0 1px 2px rgba(28,23,19,0.04); font-size: 16px;
+  }
+  [data-theme='client'] .input-field::placeholder { color: #B8988C; }
+  [data-theme='client'] .input-field:focus {
+    border-color: var(--sp-border); background-color: var(--surface);
+    box-shadow: 0 0 0 3px var(--sp-light), 0 1px 2px rgba(44,55,40,0.04);
+  }
+
+  /* ── Tags & typography ───────────────────────────────────────────────── */
+  [data-theme='client'] .tag {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full;
+    background-color: var(--surface-subtle); color: #7A6355; border: 1px solid var(--surface-subtle-border);
+    font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.04em;
+  }
+  [data-theme='client'] .t-h1 { @apply text-text-primary; font-size: 1.625rem; font-weight: 700; line-height: 1.2; letter-spacing: -0.025em; }
+  [data-theme='client'] .t-h2 { @apply text-text-primary; font-size: 1.25rem; font-weight: 700; line-height: 1.25; letter-spacing: -0.018em; }
+  [data-theme='client'] .t-h3 { @apply text-text-primary; font-size: 1.0625rem; font-weight: 600; line-height: 1.35; letter-spacing: -0.01em; }
+  [data-theme='client'] .t-body-lg { @apply text-text-secondary; font-size: 1rem; font-weight: 400; line-height: 1.65; }
+  [data-theme='client'] .t-body { @apply text-text-secondary; font-size: 0.9375rem; font-weight: 400; line-height: 1.6; }
+  [data-theme='client'] .t-body-sm { @apply text-text-secondary; font-size: 0.875rem; font-weight: 400; line-height: 1.55; letter-spacing: 0.005em; }
+  [data-theme='client'] .t-caption { @apply text-text-muted; font-size: 0.8125rem; font-weight: 500; line-height: 1.4; letter-spacing: 0.005em; }
+  [data-theme='client'] .label { @apply text-text-muted; font-size: 0.75rem; font-weight: 600; line-height: 1.3; letter-spacing: 0.04em; }
+  [data-theme='client'] .divider { border-top: 1px solid var(--hairline); }
+  [data-theme='client'] .skeleton {
+    @apply rounded-2xl; background: linear-gradient(90deg, var(--skeleton-base) 0%, var(--skeleton-shine) 40%, var(--skeleton-base) 60%, var(--skeleton-base) 100%);
+    background-size: 200% 100%; animation: shimmer 1.8s ease-in-out infinite;
+  }
+
+  /* ── Chat bubbles (client Emora) ─────────────────────────────────────── */
+  [data-theme='client'] .emora-bubble {
+    @apply px-4 py-3.5 text-text-primary leading-relaxed; border-radius: 18px 18px 18px 6px;
+    background: var(--surface); border: 1px solid var(--hairline); max-width: 85%; font-size: 0.9375rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  }
+  [data-theme='client'] .user-bubble {
+    @apply px-4 py-3.5 text-text-primary leading-relaxed; border-radius: 18px 18px 6px 18px;
+    max-width: 85%; font-size: 0.9375rem; background: var(--sp-light); border: 1px solid var(--sp-border);
+  }
+}
+
+/* directional message + typing animations (client Emora) */
+.msg-emora { animation: msgLeft 0.32s ease-out both; }
+.msg-user  { animation: msgRight 0.32s ease-out both; }
+@keyframes msgLeft  { from { opacity: 0; transform: translateX(-10px) translateY(4px); } to { opacity: 1; transform: none; } }
+@keyframes msgRight { from { opacity: 0; transform: translateX(10px) translateY(4px); }  to { opacity: 1; transform: none; } }
+.typing-dot { @apply w-1.5 h-1.5 rounded-full; background: #C8BAA8; animation: typingBounce 1.4s ease-in-out infinite; }
+.typing-dot:nth-child(2) { animation-delay: 0.18s; }
+.typing-dot:nth-child(3) { animation-delay: 0.36s; }
+@keyframes typingBounce { 0%,60%,100% { transform: translateY(0); opacity: 0.4; } 30% { transform: translateY(-5px); opacity: 1; } }
+
+/* section entrance stagger (pair with animate-fade-in) */
+.enter-delay-0 { animation-delay: 0ms;   animation-fill-mode: both; }
+.enter-delay-1 { animation-delay: 55ms;  animation-fill-mode: both; }
+.enter-delay-2 { animation-delay: 110ms; animation-fill-mode: both; }
+.enter-delay-3 { animation-delay: 165ms; animation-fill-mode: both; }
+.enter-delay-4 { animation-delay: 220ms; animation-fill-mode: both; }
+
+/* safe-area + scroll utilities */
+.pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+.pt-safe { padding-top: env(safe-area-inset-top); }
+.pb-nav  { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+.min-h-dvh { min-height: 100dvh; min-height: 100vh; }
+.h-dvh { height: 100dvh; height: 100vh; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

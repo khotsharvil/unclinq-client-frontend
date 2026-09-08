@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FDF9F4"/>
+
+  <!-- Terracotta pot -->
+  <path d="M200 382 Q196 430 188 454 L324 454 Q316 430 312 382 Z" fill="#C06C54" stroke="#A85840" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="194" y="375" width="124" height="13" rx="4" fill="#D07A62" stroke="#A85840" stroke-width="1.5"/>
+  <ellipse cx="256" cy="379" rx="56" ry="8" fill="#3D4535"/>
+  <ellipse cx="256" cy="381" rx="50" ry="5" fill="#2C332B"/>
+
+  <!-- Main stem mid-surge -->
+  <path d="M256 378 Q253 342 251 302 Q249 265 254 225 Q256 200 255 168" fill="none" stroke="#8F9779" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Leaf lower left -->
+  <path d="M252 338 Q222 318 208 286 Q220 278 244 300 Q250 318 252 338 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M252 338 Q226 310 208 286" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf lower right -->
+  <path d="M258 333 Q288 312 304 280 Q292 272 268 296 Q261 314 258 333 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M258 333 Q284 306 304 280" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf mid left -->
+  <path d="M251 292 Q220 270 206 236 Q220 228 246 256 Q252 274 251 292 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M251 292 Q224 262 206 236" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf mid right -->
+  <path d="M258 286 Q290 262 306 228 Q292 222 266 250 Q260 268 258 286 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M258 286 Q286 256 306 228" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf upper left, fully open -->
+  <path d="M252 242 Q224 218 212 184 Q226 178 250 208 Q254 225 252 242 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M252 242 Q226 212 212 184" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf in mid-unfurl — partially open, right side -->
+  <!-- This leaf is curling open — one edge is still curled, bezier showing partially open shape -->
+  <path d="M256 205 Q276 185 295 165 Q300 160 298 155 Q290 152 278 162 Q268 172 264 185 Q260 195 256 205 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Curl edge — the part still folding open -->
+  <path d="M295 165 Q302 148 296 138 Q288 136 280 148 Q276 157 278 162" fill="none" stroke="#6B7860" stroke-width="1.2" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Top leaf — just emerged, small -->
+  <path d="M255 175 Q248 152 250 130 Q256 124 262 144 Q260 160 255 175 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M255 175 Q255 150 256 130" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Motion lines arcing from top leaves — speed lines -->
+  <!-- Arc 1 upper left -->
+  <path d="M240 152 Q222 134 210 112" fill="none" stroke="#8F9779" stroke-width="1.5" stroke-linecap="round" opacity="0.40"/>
+  <!-- Arc 2 upper far left -->
+  <path d="M232 142 Q208 122 192 98" fill="none" stroke="#8F9779" stroke-width="1.2" stroke-linecap="round" opacity="0.32"/>
+  <!-- Arc 3 top center-left -->
+  <path d="M250 128 Q244 106 244 82" fill="none" stroke="#8F9779" stroke-width="1.5" stroke-linecap="round" opacity="0.40"/>
+  <!-- Arc 4 upper right -->
+  <path d="M268 148 Q288 128 302 104" fill="none" stroke="#8F9779" stroke-width="1.5" stroke-linecap="round" opacity="0.38"/>
+</svg>

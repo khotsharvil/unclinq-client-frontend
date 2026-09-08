@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FDF9F4"/>
+
+  <!-- Terracotta pot -->
+  <path d="M198 385 Q194 432 186 456 L326 456 Q318 432 314 385 Z" fill="#C06C54" stroke="#A85840" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="192" y="378" width="128" height="13" rx="4" fill="#D07A62" stroke="#A85840" stroke-width="1.5"/>
+  <ellipse cx="256" cy="382" rx="58" ry="8" fill="#3D4535"/>
+  <ellipse cx="256" cy="384" rx="52" ry="5" fill="#2C332B"/>
+
+  <!-- Main stem -->
+  <path d="M256 381 Q254 345 252 308 Q250 275 256 240 Q258 215 256 185" fill="none" stroke="#8F9779" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Leaf lower left -->
+  <path d="M253 335 Q224 315 210 285 Q222 277 246 298 Q252 316 253 335 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M253 335 Q226 308 210 285" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf lower right -->
+  <path d="M258 330 Q288 308 303 277 Q291 270 267 293 Q261 311 258 330 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M258 330 Q284 302 303 277" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf mid left -->
+  <path d="M252 280 Q222 258 210 226 Q224 220 248 246 Q253 263 252 280 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M252 280 Q226 252 210 226" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf upper right -->
+  <path d="M258 236 Q288 212 302 180 Q288 176 264 202 Q259 218 258 236 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M258 236 Q284 208 302 180" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Top leaf -->
+  <path d="M256 192 Q248 162 250 135 Q258 130 266 155 Q263 173 256 192 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M256 192 Q256 160 256 135" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Speech bubble growing organically from the stem/leaves — upper left area -->
+  <!-- Stem connector from plant -->
+  <path d="M250 255 Q230 240 218 228" fill="none" stroke="#8F9779" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- The bubble itself — organic rounded shape, like a leaf that became a bubble -->
+  <path d="M218 228 Q188 224 172 204 Q158 182 166 158 Q174 134 198 124 Q224 114 248 126 Q272 138 278 162 Q284 186 270 206 Q256 224 238 228 Q230 230 222 228 Q220 232 218 228 Z" fill="#FAF6F0" stroke="#8F9779" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Tiny tail pointing toward plant -->
+  <path d="M238 228 Q244 238 250 244" fill="none" stroke="#8F9779" stroke-width="2" stroke-linecap="round"/>
+</svg>

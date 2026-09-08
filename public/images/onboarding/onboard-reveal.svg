@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FDF9F4"/>
+
+  <defs>
+    <radialGradient id="glowReveal" cx="50%" cy="48%" r="42%">
+      <stop offset="0%" stop-color="#C06C54" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#C06C54" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Large warm glow -->
+  <ellipse cx="256" cy="250" rx="200" ry="200" fill="url(#glowReveal)"/>
+
+  <!-- Roots below pot -->
+  <path d="M230 460 Q218 472 204 490" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <path d="M244 462 Q240 478 236 498" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <path d="M256 463 Q256 480 254 500" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M268 462 Q274 478 278 498" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <path d="M282 460 Q294 474 308 490" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <!-- Secondary roots branching -->
+  <path d="M204 490 Q196 498 188 506" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+  <path d="M308 490 Q318 498 328 504" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+  <path d="M236 498 Q228 506 222 512" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" opacity="0.35"/>
+  <path d="M278 498 Q286 506 292 512" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" opacity="0.35"/>
+
+  <!-- Terracotta pot — full-size, beautiful -->
+  <path d="M194 378 Q190 430 180 456 L332 456 Q322 430 318 378 Z" fill="#C06C54" stroke="#A85840" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="188" y="370" width="136" height="14" rx="4" fill="#D07A62" stroke="#A85840" stroke-width="1.5"/>
+  <!-- Pot highlight -->
+  <path d="M200 395 Q198 420 196 440" fill="none" stroke="#D88C74" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <!-- Soil -->
+  <ellipse cx="256" cy="374" rx="62" ry="9" fill="#3D4535"/>
+  <ellipse cx="256" cy="376" rx="56" ry="6" fill="#2C332B"/>
+
+  <!-- Main stem, strong and healthy -->
+  <path d="M256 374 Q253 335 250 295 Q248 258 256 218 Q260 188 256 155" fill="none" stroke="#8F9779" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Rich full plant — many large leaves -->
+  <!-- Leaf 1 lower left, large -->
+  <path d="M251 338 Q212 314 192 276 Q208 264 238 290 Q249 314 251 338 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M251 338 Q216 306 192 276" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 2 lower right, large -->
+  <path d="M260 333 Q300 308 318 268 Q302 258 272 286 Q262 310 260 333 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M260 333 Q296 302 318 268" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 3 mid left -->
+  <path d="M250 292 Q216 266 200 230 Q216 222 244 252 Q250 270 250 292 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M250 292 Q220 258 200 230" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 4 mid right -->
+  <path d="M260 287 Q294 260 312 224 Q298 218 270 248 Q262 266 260 287 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M260 287 Q288 256 312 224" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 5 upper left, sweeping -->
+  <path d="M251 248 Q218 222 204 186 Q220 178 248 210 Q252 228 251 248 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M251 248 Q222 218 204 186" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 6 upper right -->
+  <path d="M260 244 Q292 216 308 180 Q294 176 268 206 Q262 224 260 244 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M260 244 Q286 210 308 180" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 7 far left reaching out -->
+  <path d="M250 205 Q210 178 190 142 Q208 136 238 166 Q248 185 250 205 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M250 205 Q216 170 190 142" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 8 far right reaching out -->
+  <path d="M260 200 Q298 172 316 136 Q300 132 272 162 Q263 182 260 200 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M260 200 Q292 166 316 136" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Top leaf — large terminal -->
+  <path d="M256 162 Q242 130 244 100 Q256 92 268 118 Q264 140 256 162 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M256 162 Q256 128 256 100" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+</svg>

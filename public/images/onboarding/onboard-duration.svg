@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FDF9F4"/>
+
+  <!-- Soft warm glow behind pot -->
+  <defs>
+    <radialGradient id="glowDuration" cx="50%" cy="65%" r="35%">
+      <stop offset="0%" stop-color="#C06C54" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#C06C54" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="256" cy="360" rx="130" ry="100" fill="url(#glowDuration)"/>
+
+  <!-- Terracotta pot body -->
+  <path d="M200 370 Q196 420 188 445 L324 445 Q316 420 312 370 Z" fill="#C06C54" stroke="#A85840" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Pot rim -->
+  <rect x="194" y="363" width="124" height="14" rx="4" fill="#D07A62" stroke="#A85840" stroke-width="1.5"/>
+  <!-- Soil surface -->
+  <ellipse cx="256" cy="367" rx="56" ry="8" fill="#3D4535"/>
+  <!-- Soil dark -->
+  <ellipse cx="256" cy="369" rx="50" ry="5" fill="#2C332B"/>
+
+  <!-- Main stem -->
+  <path d="M256 367 Q254 330 252 295 Q250 265 256 230" fill="none" stroke="#8F9779" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Leaf 1 - lower left -->
+  <path d="M254 320 Q224 300 210 275 Q220 268 244 285 Q250 300 254 320 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M254 320 Q232 295 210 275" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 2 - lower right -->
+  <path d="M256 315 Q286 292 302 268 Q292 262 268 280 Q260 296 256 315 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M256 315 Q280 286 302 268" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 3 - mid left -->
+  <path d="M253 278 Q222 258 208 230 Q220 224 246 244 Q252 260 253 278 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M253 278 Q228 252 208 230" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 4 - mid right -->
+  <path d="M257 272 Q290 248 308 222 Q296 218 270 238 Q261 255 257 272 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M257 272 Q284 244 308 222" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Leaf 5 - top -->
+  <path d="M256 235 Q242 208 244 180 Q256 174 268 200 Q264 218 256 235 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M256 235 Q256 204 256 180" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Tree-ring cross-section circle — prominent, upper right -->
+  <g transform="translate(330, 175)">
+    <!-- Outer border -->
+    <circle cx="0" cy="0" r="62" fill="#FDF9F4" stroke="#6B7860" stroke-width="2"/>
+    <!-- Ring 1 (outermost) -->
+    <circle cx="0" cy="0" r="54" fill="none" stroke="#8F9779" stroke-width="4" stroke-opacity="0.85"/>
+    <!-- Ring 2 -->
+    <circle cx="0" cy="0" r="44" fill="none" stroke="#B8C4A0" stroke-width="4" stroke-opacity="0.75"/>
+    <!-- Ring 3 -->
+    <circle cx="0" cy="0" r="34" fill="none" stroke="#8F9779" stroke-width="4" stroke-opacity="0.80"/>
+    <!-- Ring 4 -->
+    <circle cx="0" cy="0" r="24" fill="none" stroke="#B8C4A0" stroke-width="3.5" stroke-opacity="0.70"/>
+    <!-- Ring 5 (innermost) -->
+    <circle cx="0" cy="0" r="14" fill="none" stroke="#8F9779" stroke-width="3" stroke-opacity="0.75"/>
+    <!-- Center pith -->
+    <circle cx="0" cy="0" r="5" fill="#C4AA88" stroke="#8F9779" stroke-width="1"/>
+    <!-- Small cut-line from stem to section -->
+  </g>
+
+  <!-- Connector line from stem to cross-section -->
+  <path d="M260 225 Q290 210 268 178" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" stroke-dasharray="4,4" stroke-opacity="0.5"/>
+</svg>

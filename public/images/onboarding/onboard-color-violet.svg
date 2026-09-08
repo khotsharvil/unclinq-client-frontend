@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FDF9F4"/>
+
+  <defs>
+    <radialGradient id="glowViolet" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" stop-color="#7A5A90" stop-opacity="0.13"/>
+      <stop offset="100%" stop-color="#7A5A90" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Violet glow -->
+  <ellipse cx="256" cy="250" rx="170" ry="170" fill="url(#glowViolet)"/>
+
+  <!-- Dusty violet pot -->
+  <path d="M202 378 Q198 428 190 453 L322 453 Q314 428 310 378 Z" fill="#7A5A90" stroke="#624876" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="196" y="371" width="120" height="13" rx="4" fill="#8A6AA0" stroke="#624876" stroke-width="1.5"/>
+  <ellipse cx="256" cy="375" rx="54" ry="7" fill="#3D4535"/>
+  <ellipse cx="256" cy="377" rx="48" ry="5" fill="#2C332B"/>
+
+  <!-- Main stem -->
+  <path d="M256 374 Q254 340 252 300 Q250 260 256 220 Q258 185 254 150" fill="none" stroke="#8F9779" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Layer 1 leaves — large, lower, broad -->
+  <!-- L1 left -->
+  <path d="M253 340 Q214 318 194 280 Q210 268 238 292 Q249 316 253 340 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M253 340 Q218 310 194 280" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+  <!-- L1 right -->
+  <path d="M258 336 Q298 314 318 276 Q302 264 274 290 Q263 312 258 336 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M258 336 Q294 308 318 276" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Layer 2 leaves — medium, mid, slightly different angle — depth effect -->
+  <!-- L2 left -->
+  <path d="M252 295 Q218 270 202 236 Q216 228 242 255 Q250 272 252 295 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round" opacity="0.92"/>
+  <path d="M252 295 Q222 262 202 236" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+  <!-- L2 right angled upward -->
+  <path d="M257 292 Q292 265 314 228 Q300 222 274 250 Q264 268 257 292 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round" opacity="0.92"/>
+  <path d="M257 292 Q288 260 314 228" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Layer 3 leaves — smaller, upper, complex depth -->
+  <!-- L3 left -->
+  <path d="M252 250 Q224 228 212 194 Q226 188 248 216 Q253 233 252 250 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round" opacity="0.88"/>
+  <path d="M252 250 Q226 222 212 194" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+  <!-- L3 right -->
+  <path d="M256 246 Q286 222 302 188 Q288 184 264 212 Q259 228 256 246 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round" opacity="0.88"/>
+  <path d="M256 246 Q282 216 302 188" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Layer 4 — small upper, reaching different directions -->
+  <!-- L4 far left -->
+  <path d="M253 205 Q222 182 208 152 Q222 148 244 174 Q251 190 253 205 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round" opacity="0.85"/>
+  <path d="M253 205 Q224 176 208 152" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+  <!-- L4 far right -->
+  <path d="M256 200 Q284 176 298 146 Q284 144 262 170 Q257 186 256 200 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round" opacity="0.85"/>
+  <path d="M256 200 Q280 170 298 146" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Top terminal leaf -->
+  <path d="M254 158 Q244 128 246 100 Q256 94 266 118 Q262 138 254 158 Z" fill="#8F9779" stroke="#6B7860" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M254 158 Q254 126 256 100" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round"/>
+</svg>

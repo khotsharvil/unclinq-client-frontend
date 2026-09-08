@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Unclinq · It's not bad luck. It's a loop.</title>
+<meta name="description" content="An AI coach that helps you spot the relationship patterns you keep repeating, and practice new ones until they stick. Free to start." />
+<link rel="canonical" href="https://unclinq.com/start/" />
+<!-- Campaign landing page for paid social — kept out of the index to avoid thin/duplicate SEO. -->
+<meta name="robots" content="noindex, follow" />
+<meta name="theme-color" content="#F8F1E7" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="It's not bad luck. It's a loop." />
+<meta property="og:description" content="An AI coach for the relationship patterns you keep repeating. Free to start." />
+<meta property="og:image" content="https://unclinq.com/og-image.png" />
+<link rel="icon" type="image/png" href="/icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;500;600;700&family=Questrial&display=swap" rel="stylesheet" />
+
+<!-- ── Paid-traffic routing ──────────────────────────────────────────────────
+     July 2026: the fast-path that sent utm_source=meta straight to the app is
+     DISABLED. A campaign (223 LPV → 0 signups) revealed paid users were being
+     dropped from a 34s emotional reel directly into a 3-min onboarding quiz,
+     skipping this whole page — the one asset that answers "what is this / why
+     care / is it safe / what happens next". Everyone now sees /start; the CTA
+     script below still carries utm_*/fbclid/loop into the app for attribution.
+
+     To A/B this later, set SKIP_LP_FOR_PAID = true (or split on a hash of the
+     visitor) and the redirect returns. Kept intact for that purpose. ── -->
+<script>
+  (function(){
+    var SKIP_LP_FOR_PAID = false; // ← flip to true to send paid straight to the app
+    if (!SKIP_LP_FOR_PAID) return;
+    try {
+      var qs = new URLSearchParams(location.search);
+      if (qs.get('utm_source') === 'meta' || qs.get('src') === 'ad') {
+        var pass = new URLSearchParams();
+        qs.forEach(function(v,k){ if (/^utm_/.test(k) || k === 'fbclid' || k === 'loop') pass.set(k,v); });
+        pass.set('src','ad');
+        location.replace('https://app.unclinq.com/?' + pass.toString() + '#/onboarding');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<!-- ── Cookie/tracking consent gate (must load before any tracking) ── -->
+<script src="/consent.js"></script>
+
+<!-- ── Meta Pixel (loads ONLY after the user accepts cookies) ── -->
+<script>
+  window.META_PIXEL_ID = '875689661804139';
+  window.unclinqOnConsent(function(){
+    if (!window.META_PIXEL_ID || window.META_PIXEL_ID === 'META_PIXEL_ID') return; // no-op until set
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', window.META_PIXEL_ID);
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', { content_name: 'ad_landing' });
+  });
+</script>
+
+<!-- ── PostHog (product analytics — same project as the app) ─────────────────── -->
+<script>
+  window.UNCLINQ_POSTHOG_KEY = 'phc_vGorCMbgKXLuLPumzxZUr5GD9fpxKzUvj6TBKJeAVpx6';
+  window.UNCLINQ_POSTHOG_HOST = 'https://us.i.posthog.com';
+  window.unclinqOnConsent(function(){
+    var key = window.UNCLINQ_POSTHOG_KEY;
+    if (!key || key.indexOf('phc_') !== 0) return;
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window);
+    posthog.init(key, { api_host: window.UNCLINQ_POSTHOG_HOST, capture_pageview: true, autocapture: true, disable_session_recording: false, respect_dnt: true });
+  });
+</script>
+
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{--paper:#F8F1E7;--surface:#FDFBF7;--ink:#2C1A12;--muted:#7A7266;--terra:#C05B3A;--hairline:#E6E2D6;--serif:"Kameron",Georgia,serif;--sans:"Questrial",system-ui,sans-serif}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%}
+  .wrap{max-width:480px;margin:0 auto;padding:0 24px}
+  section{padding:40px 0}
+  /* Desktop backdrop: a soft branded glow so the centered mobile-first column
+     reads as intentional framing instead of empty space on wide screens. */
+  @media(min-width:600px){
+    body{background:radial-gradient(80% 55% at 50% -8%, rgba(192,91,58,.07), transparent 60%), var(--paper);background-attachment:fixed}
+    section,.hero{padding-left:0;padding-right:0}
+  }
+  .badge{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--terra);background:rgba(192,91,58,.08);border:1px solid rgba(192,91,58,.2);padding:6px 13px;border-radius:100px;font-weight:600}
+  .dot{width:6px;height:6px;border-radius:50%;background:var(--terra);display:inline-block;animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .hero{padding:calc(30px + env(safe-area-inset-top)) 0 34px;text-align:center}
+  .logo{width:44px;height:44px;object-fit:contain;margin:0 auto 18px}
+  .hero .badge{margin-bottom:20px}
+  .eyebrow{font-size:14px;color:var(--muted);margin-bottom:16px}
+  h1{font-family:var(--serif);font-weight:500;font-size:2.6rem;line-height:1.1;letter-spacing:-.02em;margin-bottom:20px}
+  h1 .terra{color:var(--terra)}
+  .sub{font-size:16.5px;line-height:1.62;color:#4A4038;margin:0 auto 18px;max-width:420px}
+  .sub strong{color:var(--ink)}
+  .trust{font-size:14px;line-height:1.6;color:var(--muted);max-width:400px;margin:0 auto 26px}
+  .cta{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;max-width:340px;height:62px;background:var(--terra);color:#fff;font-size:17.5px;font-weight:700;letter-spacing:.2px;border:none;border-radius:16px;text-decoration:none;box-shadow:0 12px 30px rgba(192,91,58,.3);transition:transform .12s,box-shadow .2s;animation:ctaGlow 2.6s ease-in-out infinite}
+  /* A soft breathing glow to draw the eye to the primary action — no counters,
+     no streaks, just a gentle pulse. Honoured only when motion is welcome. */
+  @keyframes ctaGlow{0%,100%{box-shadow:0 12px 30px rgba(192,91,58,.3)}50%{box-shadow:0 16px 44px rgba(192,91,58,.55)}}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 18px 46px rgba(192,91,58,.5)}
+  .cta:active{transform:scale(.985)}
+  @media(prefers-reduced-motion:reduce){.cta{animation:none}}
+  .cta-fine{font-size:13px;color:var(--muted);margin-top:14px}
+  .truth{display:flex;gap:11px;justify-content:center;align-items:center;flex-wrap:wrap;font-size:12.5px;color:var(--muted);margin:26px auto 0}
+  .truth .s{width:4px;height:4px;border-radius:50%;background:#C8B8A8}
+  .frame{margin:0 auto;width:100%;max-width:280px;aspect-ratio:9/19;border-radius:32px;overflow:hidden;border:1px solid var(--hairline);box-shadow:0 26px 60px rgba(74,55,40,.15);background:var(--surface)}
+  .frame img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+  .shotcap{text-align:center;font-size:14px;line-height:1.55;color:var(--muted);margin:18px auto 0;max-width:320px}
+  .steps{background:var(--surface);border:1px solid var(--hairline);border-radius:22px;padding:24px 22px}
+  .steps h2{font-family:var(--serif);font-weight:500;font-size:1.4rem;text-align:center;margin-bottom:18px;letter-spacing:-.01em}
+  .step{display:flex;gap:15px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--hairline)}
+  .step:first-of-type{border-top:none;padding-top:2px}
+  .step .n{flex:none;width:32px;height:32px;border-radius:50%;background:#FDF0E3;border:1px solid rgba(192,91,58,.2);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;color:var(--terra);font-size:15px}
+  .step b{display:block;font-size:15.5px;margin-bottom:3px;color:var(--ink)}
+  .step p{font-size:14px;line-height:1.55;color:var(--muted)}
+  .final{text-align:center}
+  .final h2{font-family:var(--serif);font-weight:500;font-size:1.75rem;line-height:1.18;letter-spacing:-.01em;margin-bottom:22px}
+  .final h2 .terra{color:var(--terra)}
+  footer{margin-top:8px;padding:28px 0 46px;border-top:1px solid var(--hairline);text-align:center}
+  footer a{color:var(--muted);text-decoration:none;margin:0 10px;font-size:13px}
+  .legal{font-size:12px;color:var(--muted);max-width:460px;margin:16px auto 0;line-height:1.6}
+  @media(max-width:400px){h1{font-size:2.2rem}.wrap{padding:0 20px}}
+  @media(max-width:340px){h1{font-size:1.95rem}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="/logo.png" alt="Unclinq" />
+    <span class="badge"><span class="dot"></span> Now in open beta</span>
+    <h1>It's not bad luck.<br/><span class="terra">It's a loop.</span></h1>
+    <p class="sub">The same fight. The same spiral. The same ending, with person after person. <strong>You're not broken. You're caught in a pattern.</strong></p>
+    <a class="cta" data-cta href="https://app.unclinq.com/#/onboarding?src=ad">Start for free <span aria-hidden="true">→</span></a>
+    <p class="cta-fine">Private · No credit card · Under 2 minutes</p>
+    <div class="truth"><span>No streaks</span><span class="s"></span><span>No badges</span><span class="s"></span><span>No judgment</span></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="frame"><picture><source srcset="/shot-emora.webp" type="image/webp" /><img src="/shot-emora.png" alt="A calm one-to-one conversation with Emora, the Unclinq AI coach" loading="lazy" /></picture></div>
+    <p class="shotcap">Talk it through with Emora. Private, patient, and never rushed.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="steps">
+      <h2>How it works</h2>
+      <div class="step"><span class="n">1</span><div><b>Find the pattern</b><p>Emora helps you name the exact loop you keep running. No jargon, no quiz. Just your own words.</p></div></div>
+      <div class="step"><span class="n">2</span><div><b>Catch it in the moment</b><p>Learn to spot the urge as it rises: the checking, the wall, the spiral. Catch it before it takes over.</p></div></div>
+      <div class="step"><span class="n">3</span><div><b>Practice something new</b><p>One new response at a time, until the calm one feels normal. That's real change.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="frame"><picture><source srcset="/shot-report.webp" type="image/webp" /><img src="/shot-report.png" alt="A written Pattern Report: a plain-language read of the loop you keep repeating" loading="lazy" /></picture></div>
+    <p class="shotcap">In about two weeks, you'll hold a written read of your pattern, in your own words.</p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>You don't need to know what it's called <span class="terra">to start undoing it.</span></h2>
+    <a class="cta" data-cta href="https://app.unclinq.com/#/onboarding?src=ad">Start for free <span aria-hidden="true">→</span></a>
+    <p class="cta-fine">Private · No credit card · Under 2 minutes</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
+    <a href="mailto:hello@unclinq.com">Contact</a>
+    <p class="legal">Unclinq is a self-guided behaviour-change tool, not a medical device or a substitute for professional mental health care. If you are in crisis, contact your local emergency services or a crisis line. In the moment, people beat apps every time. © 2026 Unclinq.</p>
+  </div>
+</footer>
+
+<script>
+  // Carry ad attribution (utm_*, loop) from this page's URL into the app signup
+  // URL, so PostHog/the app can attribute the signup to the campaign. Also fire
+  // the Meta 'Lead' + PostHog 'cta_click' events on click.
+  (function(){
+    var params = new URLSearchParams(location.search);
+    var pass = new URLSearchParams();
+    params.forEach(function(v,k){ if(/^utm_/.test(k) || k==='loop' || k==='fbclid'){ pass.set(k,v); } });
+    pass.set('src','ad');
+    function appUrl(){
+      var p = new URLSearchParams(pass);
+      // Carry consent to the app subdomain so accepted users aren't re-asked.
+      if (window.unclinqConsentGranted && window.unclinqConsentGranted()) p.set('consent','1');
+      return 'https://app.unclinq.com/#/onboarding?' + p.toString();
+    }
+    document.querySelectorAll('a[data-cta]').forEach(function(a){
+      a.href = appUrl();
+      a.addEventListener('click', function(){
+        a.href = appUrl(); // recompute at click so a just-accepted consent carries
+        try{ if(window.fbq) fbq('trackCustom','StartOnboarding'); }catch(e){}
+        try{ if(window.posthog) posthog.capture('cta_click',{location:'ad_landing',target:a.href}); }catch(e){}
+      });
+    });
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "appId": "com.unclinq.app",
+  "appName": "Unclinq",
+  "webDir": "dist",
+  "server": {},
+  "ios": {
+    "scrollEnabled": false,
+    "allowsLinkPreview": false
+  },
+  "android": {
+    "allowMixedContent": false,
+    "windowSoftInputMode": "adjustResize"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "launchAutoHide": true,
+      "backgroundColor": "#F6F4F1",
+      "showSpinner": false
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FDF9F4"/>
+
+  <!-- Concentric elliptical ripple rings — outermost to innermost -->
+  <!-- Ring 4 (outermost, most transparent) -->
+  <ellipse cx="256" cy="256" rx="190" ry="110" fill="none" stroke="#4A7A8C" stroke-width="1.5" stroke-opacity="0.07"/>
+  <!-- Ring 3 -->
+  <ellipse cx="256" cy="256" rx="148" ry="85" fill="none" stroke="#4A7A8C" stroke-width="1.5" stroke-opacity="0.15"/>
+  <!-- Ring 2 -->
+  <ellipse cx="256" cy="256" rx="108" ry="62" fill="none" stroke="#4A7A8C" stroke-width="1.8" stroke-opacity="0.30"/>
+  <!-- Ring 1 (innermost visible ring) -->
+  <ellipse cx="256" cy="256" rx="68" ry="40" fill="none" stroke="#4A7A8C" stroke-width="2" stroke-opacity="0.50"/>
+
+  <!-- Single small oval leaf — floating centered, slightly above center -->
+  <!-- Leaf body -->
+  <path d="M256 226 C236 226 214 236 208 255 C202 274 216 294 236 300 C246 303 256 304 256 304 C256 304 266 303 276 300 C296 294 310 274 304 255 C298 236 276 226 256 226 Z" fill="#8F9779" stroke="#6B7860" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Center vein of leaf -->
+  <path d="M256 228 Q256 264 256 302" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Secondary veins -->
+  <path d="M256 248 Q242 244 228 238" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+  <path d="M256 248 Q270 244 284 238" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+  <path d="M256 266 Q238 262 218 256" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+  <path d="M256 266 Q274 262 294 256" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+  <path d="M256 283 Q242 279 228 273" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+  <path d="M256 283 Q270 279 284 273" fill="none" stroke="#6B7860" stroke-width="1" stroke-linecap="round" opacity="0.65"/>
+
+  <!-- Tiny petiole stem below leaf -->
+  <path d="M256 304 Q256 318 256 330" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

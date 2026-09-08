@@ -1,0 +1,26 @@
+# Unclinq
+
+> Unclinq is an AI-guided app for anyone stuck in a repeating relationship pattern, including people who have never heard of attachment theory. The premise: it's not bad luck, it's a loop. You find your pattern, learn to catch it in the moment, and practice one different response until it becomes automatic.
+
+Unclinq leads with felt experience, not jargon (the 2am spiral over one unanswered text, the wall that comes up when someone gets close). "Attachment style" is something you discover inside the product, never a prerequisite. The method is grounded in behavioral science: the Transtheoretical (stages-of-change) model and the window of tolerance. It is deliberately not gamified. There are no streaks, badges, points, or scores, ever, and it is built to make you need it less over time.
+
+## What it does
+- Emora: an AI coach that reflects what is really going on, without diagnosing, advising, or offering empty reassurance. It remembers every session.
+- Rescue Mode: a few guided steps to move from flooded back to steady before any other work happens.
+- Action Lab: one real-life practice per session, matched to your pattern and this week's triggers.
+- Pattern Report: an honest written analysis every few sessions of what shifted and what is still running.
+
+## The four loops (from the on-site finder)
+- The reaching loop: when connection feels uncertain, your system reaches, checking, re-reading, seeking one more reassurance.
+- The distancing loop: when things get close or heavy, your system creates space, going quiet, getting busy, deciding you are fine on your own.
+- The push-pull loop: wanting closeness and bracing against it at the same time, reaching then regretting, pulling away then panicking.
+- A steadier base with flare-ups: mostly steady, but one specific trigger still fires the old wiring fast.
+
+## Honest boundaries
+- Not therapy and not a medical device. Emora is an AI coach, not a clinician.
+- In a crisis it stops coaching and points to real human resources.
+- No invented testimonials, ratings, or user counts. Authority comes from honestly describing the method.
+
+## Links
+- Marketing site: https://unclinq.com/
+- Web app: https://app.unclinq.com/

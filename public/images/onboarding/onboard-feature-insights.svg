@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" fill="#FDF9F4"/>
+
+  <!-- Large botanical leaf unfurling, centered -->
+  <!-- The leaf: sage green, broad, with visible center vein, curved cubic bezier shape -->
+
+  <!-- Leaf body — large teardrop/elliptical bezier -->
+  <path d="M256 420 C200 400 130 340 118 266 C106 192 148 128 200 96 C228 78 244 72 256 70 C268 72 284 78 312 96 C364 128 406 192 394 266 C382 340 312 400 256 420 Z" fill="#8F9779" stroke="#6B7860" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Center vein -->
+  <path d="M256 420 C256 380 256 300 256 240 C256 180 256 120 256 70" fill="none" stroke="#6B7860" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Secondary veins left -->
+  <path d="M256 350 C240 340 218 330 196 320" fill="none" stroke="#6B7860" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M256 300 C238 288 216 276 190 264" fill="none" stroke="#6B7860" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M256 250 C238 238 216 224 192 210" fill="none" stroke="#6B7860" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M256 200 C240 188 218 176 196 162" fill="none" stroke="#6B7860" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M256 158 C244 146 232 134 220 122" fill="none" stroke="#6B7860" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Secondary veins right -->
+  <path d="M256 350 C272 340 294 330 316 320" fill="none" stroke="#6B7860" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M256 300 C274 288 296 276 322 264" fill="none" stroke="#6B7860" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M256 250 C274 238 296 224 320 210" fill="none" stroke="#6B7860" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M256 200 C272 188 294 176 316 162" fill="none" stroke="#6B7860" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M256 158 C268 146 280 134 292 122" fill="none" stroke="#6B7860" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- Abstract text lines etched on leaf surface — thin horizontal lines at 30% opacity -->
+  <!-- Line 1 -->
+  <path d="M210 290 Q240 286 270 288 Q290 288 306 285" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round" opacity="0.30"/>
+  <!-- Line 2 -->
+  <path d="M200 315 Q236 311 268 313 Q288 312 312 309" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round" opacity="0.30"/>
+  <!-- Line 3 -->
+  <path d="M215 338 Q242 334 268 336 Q284 335 305 332" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round" opacity="0.30"/>
+  <!-- Line 4 -->
+  <path d="M224 362 Q248 358 272 360 Q286 359 300 357" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round" opacity="0.30"/>
+  <!-- Line 5 -->
+  <path d="M236 387 Q252 383 268 384 Q278 384 290 382" fill="none" stroke="#6B7860" stroke-width="1.5" stroke-linecap="round" opacity="0.30"/>
+
+  <!-- Petiole / stem nub at bottom -->
+  <path d="M256 420 Q256 440 256 455" fill="none" stroke="#6B7860" stroke-width="2" stroke-linecap="round"/>
+</svg>
